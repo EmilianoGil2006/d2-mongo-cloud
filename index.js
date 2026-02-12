@@ -9,7 +9,7 @@ connectDB();
 
 app.use(express.json());
 
-/* ------------------ CREAR USUARIO ------------------ */
+/*  CREAR USUARIO  */
 app.post('/users', async (req, res) => {
     try {
         const { nombre, email } = req.body;
@@ -23,7 +23,7 @@ app.post('/users', async (req, res) => {
     }
 });
 
-/* ------------------ VER USUARIOS ------------------ */
+/*VER USUARIOS*/
 app.get('/users', async (req, res) => {
     try {
         const users = await User.find();
@@ -33,7 +33,7 @@ app.get('/users', async (req, res) => {
     }
 });
 
-/* ------------------ ACTUALIZAR USUARIO ------------------ */
+/* ACTUALIZAR USUARIO */
 app.put('/users/:id', async (req, res) => {
     try {
         const { nombre, email } = req.body;
